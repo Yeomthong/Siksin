@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Work"
+        app:layout_constraintBottom_toTopOf="@+id/txtWorkTime"
+        app:layout_constraintEnd_toEndOf="@+id/txtWorkTime"
+        app:layout_constraintStart_toStartOf="@+id/txtWorkTime" />
+    <TextView
+        android:id="@+id/txtWorkTime"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="00"
+        android:textSize="50sp"
+        android:textColor="#0000FF"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/txtRestTime"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rest"
+        app:layout_constraintBottom_toTopOf="@+id/txtRestTime"
+        app:layout_constraintEnd_toEndOf="@+id/txtRestTime"
+        app:layout_constraintStart_toStartOf="@+id/txtRestTime" />
+    <TextView
+        android:id="@+id/txtRestTime"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="00"
+        android:textSize="50sp"
+        android:textColor="#FF0000"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txtWorkTime"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="운동 시간 : "
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/editWorkTime"
+        app:layout_constraintEnd_toStartOf="@+id/editWorkTime"
+        app:layout_constraintTop_toTopOf="@+id/editWorkTime" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="휴식 시간 : "
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/editRestTime"
+        app:layout_constraintEnd_toStartOf="@+id/editRestTime"
+        app:layout_constraintTop_toTopOf="@+id/editRestTime" />
+    <EditText
+        android:id="@+id/editWorkTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:hint="시간을 입력하세요.."
+        app:layout_constraintBottom_toTopOf="@+id/editRestTime"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <EditText
+        android:id="@+id/editRestTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="30dp"
+        android:hint="시간을 입력하세요.."
+        app:layout_constraintBottom_toTopOf="@+id/btnStop"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="시작"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnStop"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="종료"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnStart" />
+</androidx.constraintlayout.widget.ConstraintLayout>
